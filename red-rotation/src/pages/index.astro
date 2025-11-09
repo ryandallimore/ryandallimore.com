@@ -1,0 +1,24 @@
+---
+import { sanity } from "../lib/sanity";
+import { projectsQuery } from "../lib/queries";
+
+const projects = await sanity.fetch(projectsQuery);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <h1>Projects</h1>
+    {projects.map(p => (
+      <article style="margin:1rem 0">
+        <h2>{p.title}</h2>
+        {p.image && <img src={p.image} alt={p.title} style="max-width:400px" />}
+        <p>{p.summary}</p>
+      </article>
+    ))}
+  </body>
+</html>

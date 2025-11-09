@@ -1,0 +1,16 @@
+{
+  "name": "red-rotation",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.12.1",
+    "astro": "^5.15.4",
+    "groq": "^4.14.2"
+  }
+}
